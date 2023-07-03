@@ -1,0 +1,193 @@
+//VALUES AND VARIABLES
+//Declare variables called 'country', 'continent' and 'population' and assign their 
+//values according to your own country (population in millions)
+//Log their values to the console
+
+let country = "Republic of Moldova";
+let continent = "Europe";
+let population = 4.0;
+
+console.log("In " + country + ", " + continent + " there are " + population + " million of citizens");
+console.log('\n');
+
+//DATA TYPES
+//Declare a variable called 'isIsland' and set its value according to your country. 
+//The variable should hold a Boolean value. Also declare a variable 'language', but don't assign it any value yet
+//Log the types of 'isIsland', 'population', 'country' and 'language' to the console
+
+let isIsland = false; 
+let language;
+console.log("typeof isIsland - " + typeof isIsland);
+console.log("typeof population - " + typeof population);
+console.log("typeof country - " + typeof country);
+console.log("typeof language - " + typeof language);
+console.log('\n');
+
+//BASIC OPERATORS
+//If your country split in half, and each half would contain half the population, 
+//then how many people would live in each half?
+let halfPopulation = population / 2;
+console.log("How many people would live in each half?\nAnswer - " + halfPopulation);
+
+//Increase the population of your country by 1 and log the result the console
+let increasePopulation = population + 1;
+console.log("Increased population by 1 - " + increasePopulation + " millions");
+console.log('\n');
+
+//Finland has a population of 6 million. Does your country have more people than Finland?
+let finlandPopulation = 6.0;
+let hasMorePeople = population > finlandPopulation;
+console.log("Does Finland has more people than Moldova?\nAnswer - " + hasMorePeople);
+console.log('\n');
+
+//The average population of a country is 33 million people. 
+//Does your country have less people than the average country?
+let averagePopulation = 33.0;
+let hasLessPeople = population < averagePopulation;
+console.log("Does Moldova has less people than average number?\nAnswer - " + hasLessPeople);
+console.log('\n');
+
+//Based on the variables you created, create a new variable 'description' which contains 
+//a string with this format: 'Portugal is in Europe, and its 11 million people speak portuguese'
+language = "Romanian"; 
+let description = `${country} is in ${continent}, and its ${population} million people speak ${language}`;
+console.log(description);
+console.log('\n');
+
+//LOGICAL OPERATORS
+//Let's say Sarah is looking for a new country to live in. She wants to live in a country that speaks english, 
+//has less than 50 million people and is not an island.   
+//Write an if statement to help Sarah figure out if your country is right for her. You will need to write a condition 
+//that accounts for all of Sarah's criteria. Take your time with this, and check part of the solution if 
+//necessary.    
+let speaksEnglish = true;
+let lessPopulation = 40000000;
+let isIslandSarah = false;
+
+if(speaksEnglish && lessPopulation < 50000000 && isIslandSarah) {
+    console.log("You should live in Portugal:)");
+}
+
+else 
+{
+    console.log("Portugal does not meet your criteria :(");
+}
+console.log('\n');
+//TYPE CONVERSION AND COERCION
+/*Predict the result of these 5 operations without executing them:                        
+     '9' - '5';
+
+     '19' - '13' + '17';
+
+     '19' - '13' + 17;
+
+     '123' < 57;
+
+     5 + 6 + '4' + 9 - 4 - 2;                                
+
+Execute the operations to check if you were right */
+
+console.log('9' - '5');
+console.log('19' - '13' + '17');
+console.log('19' - '13' + 17);
+console.log('123' < 57);
+console.log(5 + 6 + '4' + 9 - 4 - 2);
+console.log('\n');
+
+//IF / ELSE STATEMENTS
+//If your country's population is greater than 33 million, 
+//log a string like this to the console: 'Portugal's population is above 
+//average'. Otherwise, log a string like 'Portugal's population is 22 
+//million below average' (the 22 is the average of 33 minus the country's 
+//population)  
+
+if (population > 33) {
+  console.log("Portugal's population is above average!");
+} else {
+  const difference = 33 - population;
+  console.log(`Portugal's population is ${difference} million below average.`);
+}
+console.log('\n');
+
+//THE SWITCH STATEMENT
+//Use a switch statement to log the following string for the given 'language':
+//Chinese or mandarin:  'MOST number of native speakers!'
+//Spanish: '2nd place in number of native speakers'
+//English: '3rd place'                                
+//Hindi: 'Number 4'
+//Arabic: '5th most spoken language'
+//for all other simply log 'Great language too :D'         
+language = 'Chinese';
+
+switch (language.toLowerCase()) {
+  case 'chinese':
+  case 'mandarin':
+    console.log('MOST number of native speakers!');
+    break;
+  case 'spanish':
+    console.log('2nd place in number of native speakers');
+    break;
+  case 'english':
+    console.log('3rd place');
+    break;
+  case 'hindi':
+    console.log('Number 4');
+    break;
+  case 'arabic':
+    console.log('5th most spoken language');
+    break;
+  default:
+    console.log('Great language too :D');
+    break;
+} 
+
+//EQUALITY OPERATORS: == VS. ===
+//Declare a variable 'numNeighbours' based on a prompt input like this: 
+//prompt('How many neighbour countries does your country have?');
+
+/*Variant with PROMPT
+let numNeighbours = prompt('How many neighbour countries does your country have?');
+
+//If there is only 1 neighbour, log to the console 'Only 1 border!' (use loose equality == for now)  
+if (numNeighbours.toIn == 1)
+{
+    console.log("Only 1 border!");
+}
+
+//Use an else-if block to log 'More than 1 border' in case 'numNeighbours' is greater than 1     
+else if(numNeighbours > 1)
+{
+    console.log("More than 1 border");
+}
+
+//Use an else block to log 'Noborders' (this block will be executed when 'numNeighbours' is 0 or any other value)       
+else 
+console.log("No borders!");*/
+
+//Variant for NODE.JS
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.question('How many neighbour countries does your country have? ', (numNeighbours) => {
+  
+  if (parseInt(numNeighbours) === 1) {
+    console.log("Only 1 border!");
+  }
+  
+  else if (parseInt(numNeighbours) > 1) {
+    console.log("More than 1 border");
+  }
+  
+  else {
+    console.log("No borders!");
+  }
+
+  rl.close();
+});
+
+
+
