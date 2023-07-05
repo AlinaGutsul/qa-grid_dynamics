@@ -2,7 +2,6 @@
 //Declare variables called 'country', 'continent' and 'population' and assign their 
 //values according to your own country (population in millions)
 //Log their values to the console
-
 let country = "Republic of Moldova";
 let continent = "Europe";
 let population = 4.0;
@@ -14,7 +13,6 @@ console.log('\n');
 //Declare a variable called 'isIsland' and set its value according to your country. 
 //The variable should hold a Boolean value. Also declare a variable 'language', but don't assign it any value yet
 //Log the types of 'isIsland', 'population', 'country' and 'language' to the console
-
 let isIsland = false; 
 let language;
 console.log("typeof isIsland - " + typeof isIsland);
@@ -26,25 +24,24 @@ console.log('\n');
 //BASIC OPERATORS
 //If your country split in half, and each half would contain half the population, 
 //then how many people would live in each half?
-let halfPopulation = population / 2;
-console.log("How many people would live in each half?\nAnswer - " + halfPopulation);
+console.log("How many people would live in each half?\nAnswer - " + population / 2);
 
-//Increase the population of your country by 1 and log the result the console
-let increasePopulation = population + 1;
-console.log("Increased population by 1 - " + increasePopulation + " millions");
+//Increase the population of your country by 1 and log the result the consol
+population += 1;
+//use addition assignments like +=, /=, etc
+console.log("Increased population by 1 - " + population + " millions");
 console.log('\n');
 
 //Finland has a population of 6 million. Does your country have more people than Finland?
 let finlandPopulation = 6.0;
-let hasMorePeople = population > finlandPopulation;
-console.log("Does Finland has more people than Moldova?\nAnswer - " + hasMorePeople);
+console.log("Does Moldova has more people than Finland?\nAnswer - " + MoreThanFinland);
 console.log('\n');
 
 //The average population of a country is 33 million people. 
 //Does your country have less people than the average country?
 let averagePopulation = 33.0;
-let hasLessPeople = population < averagePopulation;
-console.log("Does Moldova has less people than average number?\nAnswer - " + hasLessPeople);
+let lessThanAverage = population < averagePopulation;
+console.log("Does Moldova has less people than average number?\nAnswer - " + lessThanAverage);
 console.log('\n');
 
 //Based on the variables you created, create a new variable 'description' which contains 
@@ -61,10 +58,9 @@ console.log('\n');
 //that accounts for all of Sarah's criteria. Take your time with this, and check part of the solution if 
 //necessary.    
 let speaksEnglish = true;
-let lessPopulation = 40000000;
 let isIslandSarah = false;
 
-if(speaksEnglish && lessPopulation < 50000000 && isIslandSarah) {
+if(speaksEnglish && lessPopulation < 5.0 && isIslandSarah) {
     console.log("You should live in Portugal:)");
 }
 
@@ -100,12 +96,11 @@ console.log('\n');
 //average'. Otherwise, log a string like 'Portugal's population is 22 
 //million below average' (the 22 is the average of 33 minus the country's 
 //population)  
-
 if (population > 33) {
-  console.log("Portugal's population is above average!");
+  console.log("Moldova's population is above average!");
 } else {
   const difference = 33 - population;
-  console.log(`Portugal's population is ${difference} million below average.`);
+  console.log(`Moldova's population is ${difference} million below average.`);
 }
 console.log('\n');
 
@@ -188,6 +183,3 @@ rl.question('How many neighbour countries does your country have? ', (numNeighbo
 
   rl.close();
 });
-
-
-
