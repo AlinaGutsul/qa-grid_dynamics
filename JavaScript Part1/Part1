@@ -34,7 +34,7 @@ console.log('\n');
 
 //Finland has a population of 6 million. Does your country have more people than Finland?
 let finlandPopulation = 6.0;
-console.log("Does Moldova has more people than Finland?\nAnswer - " + MoreThanFinland);
+console.log("Does Moldova has more people than Finland?\nAnswer - " + population > finlandPopulation);
 console.log('\n');
 
 //The average population of a country is 33 million people. 
@@ -60,7 +60,7 @@ console.log('\n');
 let speaksEnglish = true;
 let isIslandSarah = false;
 
-if(speaksEnglish && lessPopulation < 5.0 && isIslandSarah) {
+if(speaksEnglish && population < 50000000 && isIslandSarah) {
     console.log("You should live in Portugal:)");
 }
 
